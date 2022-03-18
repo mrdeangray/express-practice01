@@ -7,10 +7,17 @@ const app = express()
 //     // res.send("Hello3")
 
 // })
-app.get('/', (req, res)=>{
-    res.send("home")
+// app.get('/', (req, res)=>{
+//     res.send("home")
    
+// })
+
+app.get('/r/:subreddit', (req, res)=>{
+    const{subreddit} = res.subreddit
+    res.send("home")
+
 })
+
 app.get('/r/:subreddit', (req, res)=>{
     //const subreddit = req.params.subreddit
     const {subreddit} = req.params
